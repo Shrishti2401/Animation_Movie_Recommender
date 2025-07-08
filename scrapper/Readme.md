@@ -1,6 +1,6 @@
 # 🛠️ TMDB Animation Movie Scraper
 
-> **Notebook:** `01_movie_scrapper.ipynb`  
+> **Notebook:** [01_movie_scrapper.ipynb](https://github.com/Shrishti2401/Animation_Movie_Recommender/blob/main/scrapper/01_movie_scapper.ipynb)
 > **Source:** [TMDB - The Movie Database](https://www.themoviedb.org/)  
 > **Status:** ✅ Completed  
 > **Final Output File:** `animation_movies_featured.csv`
@@ -18,17 +18,6 @@ This notebook automates the scraping and enrichment of **animated movie metadata
 
 > All movie data is sourced from **[TMDB - The Movie Database](https://www.themoviedb.org/)** using their official API.  
 > This is for **educational and non-commercial use** in line with their guidelines.
-
----
-
-## 📋 Table of Contents
-
-- [1. Import Libraries](#1-import-libraries)
-- [2. Configuration and Setup](https://github.com/Shrishti2401/Animation_Movie_Recommender/blob/main/scrapper/01_movie_scapper.ipynb/#2-configuration-and-setup)
-- [3. Batched Scraping Loop](#3-batched-scraping-loop)
-- [4. Data Cleaning: Remove Duplicates](#4-data-cleaning-remove-duplicates)
-- [5. Feature Engineering](#5-feature-engineering)
-- [6. Preview Final Data](https://github.com/Shrishti2401/Animation_Movie_Recommender/blob/main/scrapper/01_movie_scapper.ipynb/#6-preview-final-data)
 
 ---
 
