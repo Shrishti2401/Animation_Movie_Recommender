@@ -1,85 +1,87 @@
-# 🛠️ Animated Movie Scraper — TMDB Source
+# 🛠️ TMDB Animation Movie Scraper
 
-> **Part of the `Animation_Movie_Recommender` Project**  
-> **Notebook Name:** `01_movie_scraper.ipynb`  
+> **Notebook:** `01_movie_scrapper.ipynb`  
+> **Source:** [TMDB - The Movie Database](https://www.themoviedb.org/)  
 > **Status:** ✅ Completed  
-> **Source:** [The Movie Database (TMDB)](https://www.themoviedb.org/)
+> **Final Output File:** `animation_movies_featured.csv`
 
 ---
 
 ## 🎯 Objective
 
-This notebook is dedicated to scraping **animated movie metadata** from TMDB (The Movie Database) using their public API. The goal was to collect a **comprehensive and high-quality dataset** of animated films to power the upcoming **ethical value-based recommender system**.
+This notebook automates the scraping and enrichment of **animated movie metadata** from TMDB using their API. It serves as the **foundational dataset builder** for our project:  
+**👉 Animation_Movie_Recommender (based on ethical values & life lessons).**
 
 ---
 
 ## 🌐 Data Source
 
-All movie metadata in this dataset was sourced from:
-
-> **📌 [TMDB – The Movie Database](https://www.themoviedb.org/)**  
-> TMDB is a popular open-source and community-driven movie database used by many apps and platforms. Data was collected **only for learning and personal research purposes** in compliance with TMDB API usage guidelines.
+> All movie data is sourced from **[TMDB - The Movie Database](https://www.themoviedb.org/)** using their official API.  
+> This is for **educational and non-commercial use** in line with their guidelines.
 
 ---
 
-## 🔍 Features Collected
+## 📋 Table of Contents
 
-For each animation movie, the following key fields were collected:
-
-- Movie Title
-- Description (Overview)
-- Genre Tags
-- Original Language
-- Release Date
-- Runtime
-- Popularity
-- Vote Average
-- Vote Count
-- Poster URL
-- Platform Availability (when available)
+- [1. Import Libraries](#1-import-libraries)
+- [2. Configuration and Setup](#2-configuration-and-setup)
+- [3. Batched Scraping Loop](#3-batched-scraping-loop)
+- [4. Data Cleaning: Remove Duplicates](#4-data-cleaning-remove-duplicates)
+- [5. Feature Engineering](#5-feature-engineering)
+- [6. Preview Final Data](#6-preview-final-data)
 
 ---
 
-## ⚙️ Process Overview
+## 🧪 Steps Performed
 
-| Step | Description |
-|------|-------------|
-| 1️⃣ | Registered and authenticated via TMDB API |
-| 2️⃣ | Automated scraping across **1,600+ pages** (~30,000+ animation movies) |
-| 3️⃣ | Filtered for valid and relevant movie records |
-| 4️⃣ | Cleaned missing/invalid values (e.g., null runtimes, empty overviews) |
-| 5️⃣ | Removed duplicate titles and standardized naming |
-| 6️⃣ | Feature engineered additional columns:`release_year`,`release_year_month`, `release_decade`, `is_short_film` (runtime < 40 min) , `formatted_title` = Title (Year) |
-| 7️⃣ | Saved as final cleaned CSV: `animation_movies_scrapper.csv` |
+### ✅ 1. Scraping Logic:
+- Used TMDB's `discover/movie` and `movie/{id}` endpoints.
+- Total ~1600+ pages with `with_genres=16` (animation).
+- Excluded **anime** using language + keyword filters.
+- Scrapped till 500 pages , as pages after 500 do not contain Target data.
+- Batches were saved with progress checkpointing.
+
+### ✅ 2. Cleaning & Processing:
+- Removed movies with duplicate `movie_id`
+- Handled null values and missing titles
+- Updated invalid or missing release dates
+- Filtered short films (runtime < 40 mins)
+
+### ✅ 3. Feature Engineering:
+- `release_year`, `release_year_month`, `release_decade`
+- `is_short_film` flag and `title (year)` formatting
+- Cleaned runtime = 0 → converted to `Unknown`
 
 ---
 
-## 📁 Output File
+## 📁 Output Summary
 
-- **File Name:** `(animation_movies_featured.csv)[]`  
-- **Shape:** `9751 rows × 22 columns`  
-- ✔️ Cleaned, deduplicated, and feature-rich dataset  
-- ✔️ Ready for NLP analysis, tagging, and recommendation logic
+| File                          | Description                            |
+|-------------------------------|----------------------------------------|
+| `animation_movies_featured.csv` | Final cleaned and feature-engineered dataset |
+
+- **Shape:** `9751 rows × 22 columns`
+- **Columns include:** title, rating, genres, runtime, platform fields, value tags, and more
 
 ---
 
 ## 📌 Notes
 
-- Only animation genre movies were fetched using `with_genres=16` parameter in TMDB.
-- TMDB API rate limits were respected by adding strategic pauses in the loop.
-- This notebook is the **foundation step** of the recommender system project.
-
----
-
-## 📢 Disclaimer
-
-> This dataset is collected solely for **educational and non-commercial** purposes.  
-> All rights to the original data belong to TMDB and their content contributors.
+- API key must be set manually (`API_KEY = '...'`) before use.
+- Skipped pages and checkpointing help handle large-scale scraping.
+- Rate-limiting (429 errors) handled with sleep intervals.
 
 ---
 
 ## 🚀 Next Step
 
-→ Move to **NLP-based keyword extraction** and **value tagging** from user reviews/comments.
+→ Use this dataset to extract **ethical values** from user comments, reviews, or taglines. This will power a **value-driven recommendation engine** in the next phase.
+
+---
+
+## 📢 Disclaimer
+
+This project and dataset are created solely for **educational, personal, and non-commercial** use.  
+All data belongs to **TMDB and its contributors.**
 
 ---
