@@ -1,9 +1,9 @@
 # 🛠️ TMDB Animation Movie Scraper
 
-> **Notebook:** [01_movie_scrapper.ipynb](https://github.com/Shrishti2401/Animation_Movie_Recommender/blob/main/scrapper/01_movie_scapper.ipynb)
+> **Notebook:** [`01_movie_scrapper.ipynb`](https://github.com/Shrishti2401/Animation_Movie_Recommender/blob/main/scrapper/01_movie_scapper.ipynb)
 > **Source:** [TMDB - The Movie Database](https://www.themoviedb.org/)  
 > **Status:** ✅ Completed  
-> **Final Output File:** `animation_movies_featured.csv`
+> **Final Output File:** [`animation_movies_featured.csv`](https://github.com/Shrishti2401/Animation_Movie_Recommender/blob/main/data/animation_movies_featured.csv)
 
 ---
 
