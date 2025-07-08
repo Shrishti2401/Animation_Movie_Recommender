@@ -24,11 +24,11 @@ This notebook automates the scraping and enrichment of **animated movie metadata
 ## 📋 Table of Contents
 
 - [1. Import Libraries](#1-import-libraries)
-- [2. Configuration and Setup](#2-configuration-and-setup)
+- [2. Configuration and Setup](https://github.com/Shrishti2401/Animation_Movie_Recommender/blob/main/scrapper/01_movie_scapper.ipynb/#2-configuration-and-setup)
 - [3. Batched Scraping Loop](#3-batched-scraping-loop)
 - [4. Data Cleaning: Remove Duplicates](#4-data-cleaning-remove-duplicates)
 - [5. Feature Engineering](#5-feature-engineering)
-- [6. Preview Final Data](#6-preview-final-data)
+- [6. Preview Final Data](https://github.com/Shrishti2401/Animation_Movie_Recommender/blob/main/scrapper/01_movie_scapper.ipynb/#6-preview-final-data)
 
 ---
 
