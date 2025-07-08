@@ -49,12 +49,7 @@ For each animation movie, the following key fields were collected:
 | 3️⃣ | Filtered for valid and relevant movie records |
 | 4️⃣ | Cleaned missing/invalid values (e.g., null runtimes, empty overviews) |
 | 5️⃣ | Removed duplicate titles and standardized naming |
-| 6️⃣ | Feature engineered additional columns:  
-   • `release_year`  
-   • `release_year_month`  
-   • `release_decade`  
-   • `is_short_film` (runtime < 40 min)  
-   • `formatted_title` = Title (Year) |
+| 6️⃣ | Feature engineered additional columns:`release_year`,`release_year_month`, `release_decade`, `is_short_film` (runtime < 40 min) , `formatted_title` = Title (Year) |
 | 7️⃣ | Saved as final cleaned CSV: `animation_movies_scrapper.csv` |
 
 ---
