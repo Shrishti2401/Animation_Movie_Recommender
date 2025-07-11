@@ -1,4 +1,4 @@
-# 🎬 Animation_Movie_Recommender
+# 🎬 Value-Based Recommender System for User Entertainment
 
 > **Started on:** July 4, 2025  
 > **Status:** 🔨 In Progress  
@@ -9,8 +9,6 @@
 ## 🌟 Project Objective
 
 This project aims to build a **unique recommendation system for animated movies**—not just based on genre or ratings, but on **ethical values and life lessons** like *kindness, courage, family*, and more. The idea is to help users find meaningful, feel-good animated films that resonate with their personal beliefs.
-
-This is not typical recommender project—it's a heart-led attempt to merge data with storytelling values. 💛
 
 ---
 
@@ -70,10 +68,8 @@ Instructions and notebooks to explore the dataset and run the recommendation eng
 If you're a fellow fan of animated movies, or someone working on recommender systems or GenAI projects, feel free to collaborate or share feedback. Let’s build something magical and meaningful together.
 
 ---
-
-
-
  
-My Favourite: 🧡 “It is only with the heart that one can see rightly; what is essential is invisible to the eye.” — *The Little Prince*
+## My Favourite: 
+“It is only with the heart that one can see rightly; what is essential is invisible to the eye.” — *The Little Prince*
 
 ---
